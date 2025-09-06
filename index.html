@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monitoring">
+    <meta name="theme-color" content="#F6F5F4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icon-512.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Monitoring</title>
+</head>
+<body>
+<main id="main-view">
+
+    <header>
+
+        <nav id="main-nav">
+
+            <button data-view="students" class="active">Élèves</button>
+            <button data-view="activities">Activités</button>
+
+        </nav>
+
+        <nav id="level-nav">
+
+            <button data-level="PS" class="active">PS</button>
+            <button data-level="MS">MS</button>
+
+        </nav>
+
+    </header>
+
+    <div id="lists-container">
+        <!-- Les listes seront injectées ici par le JS -->
+    </div>
+
+    <button id="fab-add" aria-label="Ajouter"></button>
+
+</main>
+
+<section id="student-detail-view" class="view" hidden>
+
+    <header>
+
+        <div id="student-detail-name"></div>
+        <div class="student-detail-btn">
+            <button id="edit-student-btn">Modifier</button>
+            <button id="delete-student-btn" class="danger">Supprimer</button>
+        </div>
+
+    </header>
+
+    <div id="student-detail-content">
+        <!-- Les détails seront injectés ici -->
+    </div>
+
+    <button id="back-to-list-btn">Retour</button>
+
+</section>
+
+<div id="modal-container" class="modal" hidden>
+
+    <div class="modal-content">
+
+        <form id="modal-form">
+            <!-- Les champs du formulaire seront injectés ici -->
+        </form>
+
+        <div class="modal-actions">
+
+            <button id="modal-cancel-btn">Annuler</button>
+            <button id="modal-save-btn">Enregistrer</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
