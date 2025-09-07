@@ -177,8 +177,6 @@ nav button.active {
     position: relative;
     width: 32px;
     height: 32px;
-    border-radius: 10px;
-    background-color: rgba(237, 106, 90, 0.15);
 }
 
 .delete-activity-btn::before, .delete-activity-btn::after {
