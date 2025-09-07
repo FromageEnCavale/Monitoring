@@ -148,6 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Ajoutez cette nouvelle fonction
+    function updateBodyClass() {
+        // Supprime les classes existantes
+        document.body.classList.remove('level-ps', 'level-ms');
+
+        // Ajoute la classe correspondant au niveau actuel
+        document.body.classList.add(`level-${state.currentLevel.toLowerCase()}`);
+    }
+
+    // Modifiez la fonction updateNavButtons existante
     function updateNavButtons() {
         mainNavButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.view === state.currentView);
@@ -155,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
         levelNavButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.level === state.currentLevel);
         });
+
+        updateBodyClass();
     }
 
     // --- UI Navigation ---
@@ -401,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         loadData();
         showMainView();
+        updateBodyClass();
     }
 
     init();

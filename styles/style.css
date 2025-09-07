@@ -63,16 +63,15 @@ button, button:active, button:focus {
 /* ----- COLORS ----- */
 
 :root {
-    --background: #F5F5F5;
-    --accent: #FFFFFF;
-    --text: #141414;
-    --1: #EBEBEB;
-    --2: #E0E0E0;
-    --red: #FF4E00;
-    --green: #C2E812;
-    --blue: #357DED;
-    --purple: #9000B3;
-    --pink: #FF69EB;
+    --white: #FFFFFC;
+    --black: #141414;
+    /*--1: #EBEBEB;
+    --2: #E0E0E0;*/
+    --red: #FFADAD;
+    --green: #CAFFBF;
+    --blue: #A0C4FF;
+    --pink: #FFC6FF;
+    --purple: #BDB2FF;
 }
 
 /* ----- BODY ----- */
@@ -88,8 +87,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    color: var(--text);
-    background-color: var(--background);
+    color: var(--black);
+    background-color: var(--white);
     font-family: system-ui, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -121,7 +120,7 @@ nav {
     gap: 4px;
     padding: 4px;
     border-radius: 14px;
-    background-color: var(--1);
+    background-color: rgba(255, 255, 252, 0.25);
 }
 
 nav button {
@@ -131,7 +130,7 @@ nav button {
 }
 
 nav button.active {
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
 #lists-container {
@@ -156,7 +155,7 @@ nav button.active {
     height: 75px;
     padding: 0 20px;
     border-radius: 14px;
-    background-color: var(--accent);
+    background-color: var(--white);
     cursor: pointer;
 }
 
@@ -169,7 +168,7 @@ nav button.active {
     width: 32px;
     height: 32px;
     border-radius: 10px;
-    background-color: rgba(255, 78, 0, 0.05);
+    background-color: rgba(255, 173, 173, 0.25);
 }
 
 .delete-activity-btn::before, .delete-activity-btn::after {
@@ -179,7 +178,7 @@ nav button.active {
     top: 50%;
     width: 16px;
     height: 2px;
-    background-color: var(--red);
+    background-color: var(--black);
     transform-origin: center;
 }
 
@@ -196,7 +195,7 @@ nav button.active {
     width: 100px;
     height: 50px;
     border-radius: 14px;
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
 #fab-add::before, #fab-add::after {
@@ -204,7 +203,7 @@ nav button.active {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: var(--text);
+    background-color: var(--black);
     transform-origin: center;
 }
 
@@ -239,7 +238,7 @@ nav button.active {
 .student-detail-btn button {
     padding: 4px 10px;
     border-radius: 10px;
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
 #student-detail-content {
@@ -260,7 +259,7 @@ nav button.active {
     gap: 4px;
     padding: 10px 14px;
     border-radius: 14px;
-    background-color: var(--1);
+    background-color: rgba(255, 255, 252, 0.5);
 }
 
 .student-info div {
@@ -278,16 +277,14 @@ nav button.active {
     width: 100px;
     height: 50px;
     border-radius: 14px;
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
 .activity-status.status-acquired {
-    color: var(--text);
     background-color: var(--green);
 }
 
 .activity-status.status-not-acquired {
-    color: var(--accent);
     background-color: var(--red);
 }
 
@@ -301,7 +298,6 @@ nav button.active {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--background);
 }
 
 .modal-content {
@@ -338,32 +334,50 @@ nav button.active {
     width: 100%;
     padding: 12px 16px;
     border-radius: 10px;
-    border: solid var(--1);
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
 .form-group input::placeholder {
     opacity: 50%;
-    color: var(--text);
+    color: var(--black);
     font-style: italic;
 }
 
 .modal-actions {
     display: flex;
     gap: 4px;
+    padding: 10px 0;
 }
 
 .modal-actions button {
     width: 100%;
     padding: 14px;
     border-radius: 10px;
-    background-color: var(--accent);
+    background-color: var(--white);
 }
 
+/*
 #modal-cancel-btn:hover {
     color: var(--red);
 }
 
 #modal-save-btn {
     color: var(--blue);
+}
+*/
+
+body.level-ps {
+    background-color: var(--pink);
+}
+
+body.level-ms {
+    background-color: var(--purple);
+}
+
+body.level-ps .modal {
+    background-color: var(--pink);
+}
+
+body.level-ms .modal {
+    background-color: var(--purple);
 }
