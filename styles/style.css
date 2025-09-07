@@ -283,6 +283,7 @@ nav button.active {
 }
 
 .activity-status.status-not-acquired {
+    color: var(--white);
     background-color: var(--red);
 }
 
