@@ -65,8 +65,6 @@ button, button:active, button:focus {
 :root {
     --white: #FFFFFC;
     --black: #141414;
-    /*--1: #EBEBEB;
-    --2: #E0E0E0;*/
     --red: #FFADAD;
     --green: #CAFFBF;
     --blue: #A0C4FF;
@@ -259,7 +257,7 @@ nav button.active {
     gap: 4px;
     padding: 10px 14px;
     border-radius: 14px;
-    background-color: rgba(255, 255, 252, 0.5);
+    background-color: rgba(255, 255, 252, 0.25);
 }
 
 .student-info div {
