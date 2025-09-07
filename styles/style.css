@@ -64,7 +64,13 @@ button, button:active, button:focus {
 
 :root {
     --white: #FFFFFC;
+    ----white-75: rgba(255, 255, 252, 0.75);
+    ----white-50: rgba(255, 255, 252, 0.5);
+    ----white-25: rgba(255, 255, 252, 0.25);
     --black: #141414;
+    --black-75: rgba(20, 20, 20, 0.75);
+    --black-50: rgba(20, 20, 20, 0.5);
+    --black-25: rgba(20, 20, 20, 0.25);
     --red: #ED6A5A;
     --green: #BEEE62;
     --blue: #51BBFE;
@@ -118,7 +124,7 @@ nav {
     gap: 4px;
     padding: 4px;
     border-radius: 14px;
-    background-color: rgba(255, 255, 252, 0.25);
+    background-color: var(----white-25);
 }
 
 nav button {
@@ -162,7 +168,7 @@ nav button.active {
 }
 
 .empty {
-    color: rgba(20, 20, 20, 0.5);
+    color: var(--black-50);
     cursor: default !important;
     font-style: italic;
 }
@@ -227,10 +233,11 @@ nav button.active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 #student-detail-name {
+    padding: 0 4px;
     font-size: 32px;
 }
 
@@ -240,9 +247,15 @@ nav button.active {
 }
 
 .student-detail-btn button {
-    padding: 6px 10px;
-    border-radius: 10px;
-    background-color: var(--white);
+    padding: 4px;
+}
+
+#edit-student-btn {
+    color: var(--black-75);
+}
+
+#delete-student-btn {
+    color: var(--red);
 }
 
 #student-detail-content {
@@ -263,7 +276,7 @@ nav button.active {
     gap: 4px;
     padding: 10px 14px;
     border-radius: 14px;
-    background-color: rgba(255, 255, 252, 0.25);
+    background-color: var(----white-25);
 }
 
 .student-info div {
@@ -274,6 +287,7 @@ nav button.active {
 .student-info p, .student-info a {
     display: block;
     text-decoration: none;
+    color: var(--black-75);
 }
 
 #back-to-list-btn {
@@ -315,7 +329,6 @@ nav button.active {
 }
 
 #modal-title {
-    padding: 0 10px;
     font-size: 24px;
 }
 
@@ -332,20 +345,19 @@ nav button.active {
 }
 
 .form-group label {
-    padding: 4px 10px;
+    padding: 6px 10px;
+    color: var(--black-75);
 }
 
 .form-group input {
     width: 100%;
     padding: 12px 16px;
     border-radius: 10px;
-    border: solid 1px rgba(20, 20, 20, 0.15);
     background-color: var(--white);
 }
 
 .form-group input::placeholder {
-    opacity: 50%;
-    color: var(--black);
+    color: var(--black-50);
     font-style: italic;
 }
 
@@ -362,15 +374,13 @@ nav button.active {
     background-color: var(--white);
 }
 
-/*
-#modal-cancel-btn:hover {
+#modal-cancel-btn {
     color: var(--red);
 }
 
 #modal-save-btn {
-    color: var(--blue);
+
 }
-*/
 
 body.level-ps {
     background-color: var(--pink);
