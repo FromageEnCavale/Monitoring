@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         studentDetailContent.innerHTML = `
             <div class="student-info">
                 <div>Informations</div>
-                <p>${student.firstName} ${student.lastName || ''}</p>
+                <p>Prénom Nom : ${student.firstName} ${student.lastName || ''}</p>
                 ${student.phone1 ? `<a href="tel:${student.phone1}">Numéro Tél : ${student.phone1}</a>` : ''}
                 ${student.phone2 ? `<a href="tel:${student.phone2}">Numéro Tél : ${student.phone2}</a>` : ''}
                 ${student.medicalInfo ? `<p>PAI : ${student.medicalInfo}</p>` : ''}

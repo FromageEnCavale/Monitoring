@@ -166,7 +166,7 @@ nav button.active {
     width: 32px;
     height: 32px;
     border-radius: 10px;
-    background-color: rgba(255, 173, 173, 0.25);
+    background-color: rgba(237, 106, 90, 0.15);
 }
 
 .delete-activity-btn::before, .delete-activity-btn::after {
@@ -176,7 +176,7 @@ nav button.active {
     top: 50%;
     width: 16px;
     height: 2px;
-    background-color: var(--black);
+    background-color: var(--red);
     transform-origin: center;
 }
 
@@ -333,6 +333,7 @@ nav button.active {
     width: 100%;
     padding: 12px 16px;
     border-radius: 10px;
+    border: solid rgba(20, 20, 20, 0.15);
     background-color: var(--white);
 }
 
