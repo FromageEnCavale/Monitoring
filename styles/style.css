@@ -65,11 +65,11 @@ button, button:active, button:focus {
 :root {
     --white: #FFFFFC;
     --black: #141414;
-    --red: #FFADAD;
-    --green: #CAFFBF;
-    --blue: #A0C4FF;
-    --pink: #FFC6FF;
-    --purple: #BDB2FF;
+    --red: #ED6A5A;
+    --green: #BEEE62;
+    --blue: #51BBFE;
+    --pink: #FCD9EE;
+    --purple: #E9DCF9;
 }
 
 /* ----- BODY ----- */
