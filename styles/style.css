@@ -240,7 +240,7 @@ nav button.active {
 }
 
 .student-detail-btn button {
-    padding: 4px 10px;
+    padding: 6px 10px;
     border-radius: 10px;
     background-color: var(--white);
 }
