@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal elements
     const modalContainer = document.getElementById('modal-container');
+    const modalTitle = document.getElementById('modal-title');
     const modalForm = document.getElementById('modal-form');
     const modalCancelBtn = document.getElementById('modal-cancel-btn');
     const modalSaveBtn = document.getElementById('modal-save-btn');
@@ -174,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showModal(type, studentId = null) {
         state.editingStudentId = studentId;
         if (type === 'addStudent') {
+            modalTitle.textContent = `Ajouter un élève en ${state.currentLevel}`;
             modalForm.innerHTML = `
                 <div class="form-group">
                     <label for="firstName">Prénom (obligatoire)</label>
@@ -198,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         } else if (type === 'editStudent') {
             const student = state.data.students.find(s => s.id === studentId);
+            modalTitle.textContent = `Modifier l'élève ${student.firstName}`;
             modalForm.innerHTML = `
                 <input type="hidden" id="studentId" value="${student.id}">
                 <div class="form-group">
@@ -222,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
         } else if (type === 'addActivity') {
+            modalTitle.textContent = `Créer une activité en ${state.currentLevel}`;
             modalForm.innerHTML = `
                 <div class="form-group">
                     <label for="activityName">Intitulé de l'activité</label>
@@ -234,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function hideModal() {
         modalContainer.hidden = true;
+        modalTitle.textContent = '';
         modalForm.innerHTML = '';
         state.editingStudentId = null;
     }

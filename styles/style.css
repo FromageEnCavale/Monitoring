@@ -19,15 +19,12 @@ ul[role='list'], ol[role='list'] {
     list-style: none;
 }
 
-a {
+a, a:active, a:focus {
     text-decoration: none;
     color: inherit;
-}
-
-a, a:active, a:focus {
-    -webkit-tap-highlight-color: transparent;
     outline: none;
     box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button, input, textarea, select {
@@ -36,6 +33,9 @@ button, input, textarea, select {
     border: none;
     background: none;
     appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
 }
 
 button {
@@ -58,10 +58,6 @@ button, button:active, button:focus {
 
 [hidden] {
     display: none !important;
-}
-
-input, textarea, select, button {
-    border-radius: 0;
 }
 
 /* ----- COLORS ----- */
@@ -160,7 +156,7 @@ nav button.active {
     height: 75px;
     padding: 0 20px;
     border-radius: 14px;
-    background-color: var(--1);
+    background-color: var(--accent);
     cursor: pointer;
 }
 
@@ -317,6 +313,11 @@ nav button.active {
     border-radius: 14px;
 }
 
+#modal-title {
+    padding: 0 10px;
+    font-size: 24px;
+}
+
 #modal-form {
     display: flex;
     flex-direction: column;
@@ -359,12 +360,10 @@ nav button.active {
     background-color: var(--accent);
 }
 
-#modal-cancel-btn {
+#modal-cancel-btn:hover {
     color: var(--red);
-    background-color: rgba(255, 78, 0, 0.05);
 }
 
 #modal-save-btn {
     color: var(--blue);
-    background-color: rgba(53, 125, 237, 0.05);
 }
