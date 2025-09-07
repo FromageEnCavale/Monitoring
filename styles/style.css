@@ -161,6 +161,12 @@ nav button.active {
     flex: 1;
 }
 
+.empty {
+    color: rgba(20, 20, 20, 0.5);
+    cursor: default !important;
+    font-style: italic;
+}
+
 .delete-activity-btn {
     position: relative;
     width: 32px;

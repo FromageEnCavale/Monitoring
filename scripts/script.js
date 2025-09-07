@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .sort((a, b) => a.firstName.localeCompare(b.firstName));
 
         if (filteredStudents.length === 0) {
-            ul.innerHTML = `<li>Aucun élève en ${state.currentLevel}</li>`;
+            ul.innerHTML = `<li class="empty">Aucun élève en ${state.currentLevel}</li>`;
         } else {
             filteredStudents.forEach(student => {
                 const li = document.createElement('li');
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .sort((a, b) => b.createdAt - a.createdAt); // Newest first
 
         if (filteredActivities.length === 0) {
-            ul.innerHTML = `<li>Aucune activité en ${state.currentLevel}</li>`;
+            ul.innerHTML = `<li class="empty">Aucune activité en ${state.currentLevel}</li>`;
         } else {
             filteredActivities.forEach(activity => {
                 const li = document.createElement('li');
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return `<li class="activity-status ${statusClass}" data-activity-id="${activity.id}">
                                 ${activity.name}
                             </li>`;
-        }).join('') : '<li>Aucune activité pour ce niveau</li>'}
+        }).join('') : '<li class="empty">Aucune activité pour ce niveau</li>'}
             </ul>
         `;
 
