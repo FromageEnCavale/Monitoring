@@ -130,7 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${student.phone1 ? `<a href="tel:${student.phone1}">Numéro Tél : ${student.phone1}</a>` : ''}
                 ${student.phone2 ? `<a href="tel:${student.phone2}">Numéro Tél : ${student.phone2}</a>` : ''}
                 ${student.medicalInfo ? `<p>PAI : ${student.medicalInfo}</p>` : ''}
-                ${!student.phone1 && !student.phone2 && !student.medicalInfo ? '<p>Aucune information complémentaire</p>' : ''}
+                ${student.note ? `<p>Note : ${student.note}</p>` : ''}
+                ${!student.phone1 && !student.phone2 && !student.medicalInfo && !student.note ? '<p>Aucune information complémentaire</p>' : ''}
             </div>
             <ul class="item-list">
                 ${activitiesForLevel.length > 0 ? activitiesForLevel.map(activity => {
@@ -209,6 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <label for="medicalInfo">PAI</label>
                     <input id="medicalInfo" type="text" placeholder="Amoxicilline">
                 </div>
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <input id="note" type="text" placeholder="Note">
+                </div>
             `;
         } else if (type === 'editStudent') {
             const student = state.data.students.find(s => s.id === studentId);
@@ -234,6 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="form-group">
                     <label for="medicalInfo">PAI</label>
                     <input type="text" id="medicalInfo" placeholder="Amoxicilline" value="${student.medicalInfo || ''}">
+                </div>
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <input type="text" id="note" placeholder="Note" value="${student.note || ''}">
                 </div>
             `;
         } else if (type === 'addActivity') {
@@ -317,6 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
             phone1: document.getElementById('phone1').value.trim(),
             phone2: document.getElementById('phone2').value.trim(),
             medicalInfo: document.getElementById('medicalInfo').value.trim(),
+            note: document.getElementById('note').value.trim(),
         };
 
         let currentId = state.editingStudentId;
