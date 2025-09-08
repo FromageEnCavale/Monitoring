@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
                 <input type="hidden" id="studentId" value="${student.id}">
                 <div class="form-group">
-                    <label for="firstName">Prénom (obligatoire)</label>
+                    <label for="firstName">Prénom <span>(obligatoire)</span></label>
                     <input type="text" id="firstName" placeholder="Jean" value="${student.firstName}" required>
                 </div>
                 <div class="form-group">
