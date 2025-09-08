@@ -214,14 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
 
-    function updateBodyClass() {
-        
-        document.body.classList.remove('level-ps', 'level-ms');
-
-        document.body.classList.add(`level-${state.currentLevel.toLowerCase()}`);
-    
-    }
-
     function updateNavButtons() {
     
         mainNavButtons.forEach(btn => {
@@ -235,8 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active', btn.dataset.level === state.currentLevel);
     
         });
-
-        updateBodyClass();
     
     }
 
@@ -273,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalForm.innerHTML = `
     
                 <div class="form-group">
-                    <label for="firstName">Prénom (obligatoire)</label>
+                    <label for="firstName">Prénom <span>(obligatoire)</span></label>
                     <input type="text" id="firstName" placeholder="Jean" required>
                 </div>
                 <div class="form-group">
