@@ -341,6 +341,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         modalContainer.hidden = false;
+
+        const phoneInputs = modalForm.querySelectorAll('#phone1, #phone2');
+        
+        phoneInputs.forEach(input => {
+        
+            input.addEventListener('input', (e) => {
+        
+                let value = e.target.value.replace(/\D/g, "");
+        
+                value = value.substring(0, 10);
+        
+                let formatted = value.replace(/(\d{2})(?=\d)/g, "$1 ");
+        
+                e.target.value = formatted.trim();
+        
+            });
+        
+        });
     
     }
 
