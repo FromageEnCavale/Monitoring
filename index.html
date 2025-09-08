@@ -16,75 +16,47 @@
     <title>Monitoring</title>
 </head>
 <body>
-<main id="main-view">
-
-    <header>
-
-        <nav id="main-nav">
-
-            <button data-view="students" class="active">Élèves</button>
-            <button data-view="activities">Activités</button>
-
-        </nav>
-
-        <nav id="level-nav">
-
-            <button data-level="PS" class="active">PS</button>
-            <button data-level="MS">MS</button>
-
-        </nav>
-
-    </header>
-
-    <div id="lists-container">
-        <!-- Les listes seront injectées ici par le JS -->
-    </div>
-
-    <button id="fab-add" aria-label="Ajouter"></button>
-
-</main>
-
-<section id="student-detail-view" class="view" hidden>
-
-    <header>
-
-        <div id="student-detail-name"></div>
-        <div class="student-detail-btn">
-            <button id="edit-student-btn">Modifier</button>
-            <button id="delete-student-btn" class="danger">Supprimer</button>
+    <main id="main-view">
+        <header>
+            <nav id="main-nav">
+                <button data-view="students" class="active">Élèves</button>
+                <button data-view="activities">Activités</button>
+            </nav>
+            <nav id="level-nav">
+                <button data-level="PS" class="active">PS</button>
+                <button data-level="MS">MS</button>
+            </nav>
+        </header>
+        <div id="lists-container">
+            <!-- Les listes seront injectées ici par le JS -->
         </div>
-
-    </header>
-
-    <div id="student-detail-content">
-        <!-- Les détails seront injectés ici -->
-    </div>
-
-    <button id="back-to-list-btn">Retour</button>
-
-</section>
-
-<div id="modal-container" class="modal" hidden>
-
-    <div class="modal-content">
-
-        <div id="modal-title"></div>
-
-        <form id="modal-form">
-            <!-- Les champs du formulaire seront injectés ici -->
-        </form>
-
-        <div class="modal-actions">
-
-            <button id="modal-cancel-btn">Annuler</button>
-            <button id="modal-save-btn">Enregistrer</button>
-
+        <button id="fab-add" aria-label="Ajouter"></button>
+    </main>
+    <section id="student-detail-view" class="view" hidden>
+        <header>
+            <div id="student-detail-name"></div>
+            <div class="student-detail-btn">
+                <button id="edit-student-btn">Modifier</button>
+                <button id="delete-student-btn" class="danger">Supprimer</button>
+            </div>
+        </header>
+        <div id="student-detail-content">
+            <!-- Les détails seront injectés ici -->
         </div>
-
+        <button id="back-to-list-btn">Retour</button>
+    </section>
+    <div id="modal-container" class="modal" hidden>
+        <div class="modal-content">
+            <div id="modal-title"></div>
+            <form id="modal-form">
+                <!-- Les champs du formulaire seront injectés ici -->
+            </form>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn">Annuler</button>
+                <button id="modal-save-btn">Enregistrer</button>
+            </div>
+        </div>
     </div>
-
-</div>
-
-<script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
