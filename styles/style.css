@@ -394,10 +394,10 @@ nav button.active {
 
 button[data-level="PS"].active {
     /*background-color: #F3B9CD;*/
-    background: linear-gradient(to top, rgba(243, 185, 205, 0.25) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(243, 185, 205, 0.5) 0%, transparent 100%);
 }
 
 button[data-level="MS"].active {
     /*background-color: #E7BEEF;*/
-    background: linear-gradient(to top, rgba(231, 190, 239, 0.25) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(231, 190, 239, 0.5) 0%, transparent 100%);
 }
