@@ -4,8 +4,8 @@
   "description": "Une application de monitoring",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#FFFFFC",
-  "theme_color": "#FFFFFC",
+  "background_color": "#F7F9F9",
+  "theme_color": "#F7F9F9",
   "orientation": "portrait",
   "icons": [
     {
