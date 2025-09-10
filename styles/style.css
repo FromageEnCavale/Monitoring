@@ -300,14 +300,6 @@ nav button.active {
     background-color: var(--white);
 }
 
-.activity-status.status-acquired {
-    background: linear-gradient(to top, rgba(189, 211, 88, 0.5) 0%, transparent 100%);
-}
-
-.activity-status.status-not-acquired {
-    background: linear-gradient(to top, rgba(232, 72, 85, 0.5) 0%, transparent 100%);
-}
-
 .modal {
     z-index: 1;
     position: fixed;
@@ -392,12 +384,31 @@ nav button.active {
     background-color: var(--dark-grey);
 }
 
+/*.activity-status {
+    border: none !important;
+}*/
+
+.status-acquired, .status-not-acquired {
+    padding: 0 21px !important;
+    border: none !important;
+}
+
+.activity-status.status-acquired {
+    background-color: rgba(189, 211, 88, 0.5);
+}
+
+.activity-status.status-not-acquired {
+    background-color: rgba(232, 72, 85, 0.5);
+}
+
+button[data-level="PS"], button[data-level="MS"] {
+    border: none !important;
+}
+
 button[data-level="PS"].active {
-    /*background-color: #F3B9CD;*/
-    background: linear-gradient(to top, rgba(243, 185, 205, 0.5) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(222, 59, 113, 0.35) 0%, transparent 100%);
 }
 
 button[data-level="MS"].active {
-    /*background-color: #E7BEEF;*/
-    background: linear-gradient(to top, rgba(231, 190, 239, 0.5) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(124, 35, 140, 0.35) 0%, transparent 100%);
 }
