@@ -76,10 +76,10 @@ button, button:active, button:focus {
     --text-25-dark: rgba(247, 249, 249, 0.25);
     --background-light: #F7F9F9;
     --background-dark: #000000;
-    --layer-one-light: #FFFFFF;
-    --layer-one-dark: #141414;
-    --layer-two-light: #E8EDED;
-    --layer-two-dark: #292929;
+    --layer-light: #FFFFFF;
+    --layer-dark: #141414;
+    --border-light: #E8EDED;
+    --border-dark: #292929;
     --red: #E84855;
     --green: #BDD358;
     --blue: #3E92CC;
@@ -133,7 +133,7 @@ nav {
     gap: 4px;
     padding: 4px;
     border-radius: 14px;
-    background-color: var(--layer-one);
+    background-color: var(--layer);
 }
 
 nav button {
@@ -145,7 +145,7 @@ nav button {
 }
 
 nav button.active {
-    border: solid 1px var(--layer-two);
+    border: solid 1px var(--border);
     color: var(--text);
 }
 
@@ -171,8 +171,8 @@ nav button.active {
     height: 75px;
     padding: 0 20px;
     border-radius: 14px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
     cursor: pointer;
 }
 
@@ -216,8 +216,8 @@ nav button.active {
     width: 100px;
     height: 50px;
     border-radius: 14px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
 }
 
 #fab-add::before, #fab-add::after {
@@ -261,8 +261,8 @@ nav button.active {
 .student-detail-btn button {
     padding: 4px 10px;
     border-radius: 10px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
 }
 
 #delete-student-btn {
@@ -287,7 +287,7 @@ nav button.active {
     gap: 4px;
     padding: 10px 14px;
     border-radius: 14px;
-    background-color: var(--layer-two);
+    background-color: var(--layer);
 }
 
 .student-info div {
@@ -306,8 +306,8 @@ nav button.active {
     width: 100px;
     height: 50px;
     border-radius: 14px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
 }
 
 .modal {
@@ -364,8 +364,8 @@ nav button.active {
     width: 100%;
     padding: 14px 18px;
     border-radius: 10px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
 }
 
 .form-group input::placeholder {
@@ -382,16 +382,12 @@ nav button.active {
     width: 100%;
     padding: 14px;
     border-radius: 10px;
-    border: solid 1px var(--layer-two);
-    background-color: var(--layer-one);
+    border: solid 1px var(--border);
+    background-color: var(--layer);
 }
 
 #modal-cancel-btn {
     color: var(--red);
-}
-
-#modal-save-btn {
-    background-color: var(--layer-two);
 }
 
 .status-acquired, .status-not-acquired {
@@ -427,8 +423,8 @@ button[data-level="MS"].active {
         --text-50: var(--text-50-light);
         --text-25: var(--text-25-light);
         --background: var(--background-light);
-        --layer-one: var(--layer-one-light);
-        --layer-two: var(--layer-two-light);
+        --layer: var(--layer-light);
+        --border: var(--border-light);
     }
 
 }
@@ -441,8 +437,8 @@ button[data-level="MS"].active {
         --text-50: var(--text-50-dark);
         --text-25: var(--text-25-dark);
         --background: var(--background-dark);
-        --layer-one: var(--layer-one-dark);
-        --layer-two: var(--layer-two-dark);
+        --layer: var(--layer-dark);
+        --border: var(--border-dark);
     }
 
 }
