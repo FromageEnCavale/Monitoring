@@ -63,19 +63,19 @@ button, button:active, button:focus {
 /* ----- COLORS ----- */
 
 /*https://coolors.co/e84855-bdd358-3e92cc-7c238c-de3b71*/
-/*https://coolors.co/000000-141414-292929-e8eded-f7f9f9-ffffff*/
+/*https://coolors.co/0a0a0a-141414-292929-e8eded-f7f9f9-ffffff*/
 
 :root {
     --text-light: #000000;
-    --text-dark: #F7F9F9;
+    --text-dark: #FFFFFF;
     --text-75-light: rgba(0, 0, 0, 0.75);
-    --text-75-dark: rgba(247, 249, 249, 0.75);
+    --text-75-dark: rgba(255, 255, 255, 0.75);
     --text-50-light: rgba(0, 0, 0, 0.5);
-    --text-50-dark: rgba(247, 249, 249, 0.5);
+    --text-50-dark: rgba(255, 255, 255, 0.5);
     --text-25-light: rgba(0, 0, 0, 0.25);
-    --text-25-dark: rgba(247, 249, 249, 0.25);
+    --text-25-dark: rgba(255, 255, 255, 0.25);
     --background-light: #F7F9F9;
-    --background-dark: #000000;
+    --background-dark: #0A0A0A;
     --layer-light: #FFFFFF;
     --layer-dark: #141414;
     --border-light: #E8EDED;
