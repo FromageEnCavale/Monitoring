@@ -390,6 +390,17 @@ nav button.active {
     color: var(--red);
 }
 
+#confirm-modal-message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+}
+
+#confirm-ok-btn {
+    color: var(--red);
+}
+
 .status-acquired, .status-not-acquired {
     padding: 0 21px !important;
     border: none !important;

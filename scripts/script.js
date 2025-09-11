@@ -374,6 +374,46 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
 
+    const confirmModal = document.getElementById('confirm-modal');
+    
+    const confirmMessage = document.getElementById('confirm-modal-message');
+    
+    const confirmCancelBtn = document.getElementById('confirm-cancel-btn');
+    
+    const confirmOkBtn = document.getElementById('confirm-ok-btn');
+
+    function showConfirmModal(message, onConfirm) {
+    
+        confirmMessage.textContent = message;
+    
+        confirmModal.hidden = false;
+
+        const cleanUp = () => {
+    
+            confirmOkBtn.onclick = null;
+    
+            confirmCancelBtn.onclick = null;
+    
+            confirmModal.hidden = true;
+    
+        };
+
+        confirmOkBtn.onclick = () => {
+    
+            cleanUp();
+    
+            if (onConfirm) onConfirm();
+    
+        };
+
+        confirmCancelBtn.onclick = () => {
+    
+            cleanUp();
+    
+        };
+    
+    }
+
     mainNavButtons.forEach(btn => {
     
         btn.addEventListener('click', () => {
@@ -442,15 +482,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     deleteStudentBtn.addEventListener('click', () => {
     
-        if (confirm('Voulez-vous vraiment supprimer cet élève ? Cette action est irréversible.')) {
+        showConfirmModal(
     
-            state.data.students = state.data.students.filter(s => s.id !== state.editingStudentId);
+            "Voulez-vous vraiment supprimer cet élève ? Cette action est irréversible.",
     
-            saveData();
+            () => {
     
-            showMainView();
+                state.data.students = state.data.students.filter(s => s.id !== state.editingStudentId);
     
-        }
+                saveData();
+    
+                showMainView();
+    
+            }
+    
+        );
     
     });
 
@@ -563,26 +609,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function deleteActivity(activityId) {
-    
-        if (confirm("Voulez-vous vraiment supprimer cette activité ? Elle sera retirée de tous les élèves.")) {
-    
-            state.data.activities = state.data.activities.filter(a => a.id !== activityId);
-    
-            state.data.students.forEach(student => {
-    
-                if (student.activityStatus[activityId]) {
-    
-                    delete student.activityStatus[activityId];
-    
-                }
-    
-            });
-    
-            saveData();
-    
-            render();
-    
-        }
+        
+        showConfirmModal(
+        
+            "Voulez-vous vraiment supprimer cette activité ? Elle sera retirée pour tous les élèves.",
+        
+            () => {
+        
+                state.data.activities = state.data.activities.filter(a => a.id !== activityId);
+        
+                state.data.students.forEach(student => {
+        
+                    if (student.activityStatus[activityId]) {
+        
+                        delete student.activityStatus[activityId];
+        
+                    }
+        
+                });
+        
+                saveData();
+        
+                render();
+        
+            }
+        
+        );
     
     }
 
