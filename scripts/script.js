@@ -363,15 +363,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function hideModal() {
-    
+        
         modalContainer.hidden = true;
-    
+        
         modalTitle.textContent = '';
-    
+        
         modalForm.innerHTML = '';
-    
-        state.editingStudentId = null;
-    
+
+        if (studentDetailView.hidden) {
+        
+            state.editingStudentId = null;
+        }
+        
     }
 
     const confirmModal = document.getElementById('confirm-modal');
