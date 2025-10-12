@@ -63,15 +63,15 @@ button, button:active, button:focus {
 /* ----- FONTS ----- */
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-family: "Roboto-local";
+    src: url("../assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
     font-display: swap;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+    font-family: "Roboto-local";
+    src: url("../assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf") format("truetype");
     font-display: swap;
     font-style: italic;
 }
@@ -118,7 +118,7 @@ body {
     flex-direction: column;
     color: var(--text);
     background-color: var(--background);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto-local", sans-serif;
     line-height: 1.4;
     font-weight: 400;
     font-size: 16px;
