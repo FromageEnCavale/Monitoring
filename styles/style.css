@@ -428,6 +428,104 @@ button[data-level="MS"].active {
 
 /* ----- SPLASH SCREEN ----- */
 
+/* ----- V3 ----- */
+
+#splash {
+    z-index: 1;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, var(--background), var(--background));
+    animation: splashFade 1.4s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
+}
+
+#splash img {
+    width: 100px;
+    opacity: 0;
+    animation: logoMotion 1.4s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
+}
+
+@keyframes logoMotion {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+        filter: blur(8px);
+    }
+
+    12.5% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+    87.5% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        box-shadow: 0 0 0 var(--background);
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes splashFade {
+
+    0%, 87.5% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}
+
+/* ----- V2 ----- */
+
+/*#splash {
+    z-index: 1;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    background-color: var(--background);
+    animation: fadeOut 0.25s ease forwards 1s;
+}
+
+#splash img {
+    opacity: 0;
+    width: 100px;
+    animation: logoIn 0.5s ease forwards;
+}
+
+@keyframes logoIn {
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeOut {
+
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}*/
+
+/* ----- V1 ----- */
+
 /*#splash {
     z-index: 1;
     position: fixed;
@@ -468,8 +566,8 @@ button[data-level="MS"].active {
 
     100% {
         opacity: 0;
-        !*transform: scale(28);
-        filter: blur(68px);*!
+        transform: scale(28);
+        filter: blur(68px);
     }
 
 }
@@ -486,41 +584,6 @@ button[data-level="MS"].active {
     }
 
 }*/
-
-#splash {
-    z-index: 1;
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    background-color: var(--background);
-    animation: fadeOut 0.25s ease forwards 1s;
-}
-
-#splash img {
-    opacity: 0;
-    width: 100px;
-    animation: logoIn 0.5s ease forwards;
-}
-
-@keyframes logoIn {
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-@keyframes fadeOut {
-
-    to {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-}
 
 /* ----- THEMES ----- */
 
