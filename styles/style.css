@@ -456,13 +456,13 @@ button[data-level="MS"].active {
     align-items: center;
     margin-bottom: 40px;
     background: radial-gradient(circle at center, var(--background), var(--background));
-    animation: splashFade 1.8s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
+    animation: splashFade 1.4s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
 }
 
 #splash img {
     width: 100px;
     opacity: 0;
-    animation: logoMotion 1.8s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
+    animation: logoMotion 1.4s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
 }
 
 @keyframes logoMotion {
