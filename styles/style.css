@@ -454,6 +454,7 @@ button[data-level="MS"].active {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     background: radial-gradient(circle at center, var(--background), var(--background));
     animation: splashFade 1.8s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
 }
@@ -472,17 +473,10 @@ button[data-level="MS"].active {
         filter: blur(8px);
     }
 
-    12.5% {
+    12.5%, 87.5% {
         opacity: 1;
         transform: scale(1);
         filter: blur(0);
-    }
-
-    87.5% {
-        opacity: 1;
-        transform: scale(1);
-        filter: blur(0);
-        box-shadow: 0 0 0 var(--background);
     }
 
     100% {
