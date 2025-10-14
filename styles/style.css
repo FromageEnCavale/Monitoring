@@ -118,6 +118,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--text);
     background-color: var(--background);
     font-family: "Nunito-local", sans-serif;
@@ -135,6 +137,7 @@ main, section.view {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+    max-width: 480px;
     width: 100%;
     height: 100%;
     padding: 48px 14px;
@@ -186,6 +189,7 @@ nav button.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
     width: 100%;
     height: 68px;
     padding: 0 20px;
@@ -232,7 +236,7 @@ nav button.active {
 
 #fab-add {
     position: relative;
-    width: 100%;
+    width: 88px;
     height: 48px;
     border-radius: 14px;
     border: solid 1px var(--border);
@@ -321,7 +325,7 @@ nav button.active {
 
 #back-to-list-btn {
     position: relative;
-    width: 100%;
+    width: 88px;
     height: 48px;
     border-radius: 14px;
     border: solid 1px var(--border);
