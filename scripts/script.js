@@ -386,9 +386,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmOkBtn = document.getElementById('confirm-ok-btn');
 
     function showConfirmModal(message, onConfirm) {
-    
-        confirmMessage.textContent = message;
-    
+
+        confirmMessage.innerHTML = message;
+
         confirmModal.hidden = false;
 
         const cleanUp = () => {
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         showConfirmModal(
     
-            "Voulez-vous vraiment supprimer cet élève ? Cette action est irréversible.",
+            "Voulez-vous vraiment supprimer cet élève ?<br>Cette action est irréversible.",
     
             () => {
     

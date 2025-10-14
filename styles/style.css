@@ -63,16 +63,18 @@ button, button:active, button:focus {
 /* ----- FONTS ----- */
 
 @font-face {
-    font-family: "Roboto-local";
-    src: url("../assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+    font-family: "Nunito-local";
+    src: url("../assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
+    font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto-local";
-    src: url("../assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+    font-family: "Nunito-local";
+    src: url("../assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
+    font-weight: 100 900;
     font-style: italic;
 }
 
@@ -118,7 +120,7 @@ body {
     flex-direction: column;
     color: var(--text);
     background-color: var(--background);
-    font-family: "Roboto-local", sans-serif;
+    font-family: "Nunito-local", sans-serif;
     line-height: 1.4;
     font-weight: 400;
     font-size: 16px;
@@ -135,7 +137,7 @@ main, section.view {
     gap: 14px;
     width: 100%;
     height: 100%;
-    padding: 50px 14px;
+    padding: 48px 14px;
 }
 
 header {
@@ -148,6 +150,7 @@ header {
 nav {
     display: flex;
     gap: 4px;
+    height: 60px;
     padding: 4px;
     border-radius: 14px;
     background-color: var(--layer);
@@ -155,7 +158,6 @@ nav {
 
 nav button {
     width: 100%;
-    padding: 14px;
     border-radius: 10px;
     border: solid 1px transparent;
     color: var(--text-50);
@@ -185,7 +187,7 @@ nav button.active {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 75px;
+    height: 68px;
     padding: 0 20px;
     border-radius: 14px;
     border: solid 1px var(--border);
@@ -205,8 +207,8 @@ nav button.active {
 
 .delete-activity-btn {
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
 }
 
 .delete-activity-btn::before, .delete-activity-btn::after {
@@ -230,8 +232,8 @@ nav button.active {
 
 #fab-add {
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 100%;
+    height: 48px;
     border-radius: 14px;
     border: solid 1px var(--border);
     background-color: var(--layer);
@@ -262,7 +264,7 @@ nav button.active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 
 #student-detail-name {
@@ -276,8 +278,8 @@ nav button.active {
 }
 
 .student-detail-btn button {
-    padding: 4px 10px;
-    border-radius: 10px;
+    padding: 2px 8px;
+    border-radius: 8px;
     border: solid 1px var(--border);
     background-color: var(--layer);
 }
@@ -301,8 +303,7 @@ nav button.active {
     top: 0;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 10px 14px;
+    padding: 8px 14px;
     border-radius: 14px;
     background-color: var(--layer);
 }
@@ -320,8 +321,8 @@ nav button.active {
 
 #back-to-list-btn {
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 100%;
+    height: 48px;
     border-radius: 14px;
     border: solid 1px var(--border);
     background-color: var(--layer);
@@ -343,10 +344,8 @@ nav button.active {
 .modal-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 24px;
     width: 85%;
-    padding: 4px;
-    border-radius: 14px;
 }
 
 #modal-title {
@@ -356,8 +355,8 @@ nav button.active {
 #modal-form {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 10px;
+    gap: 8px;
+    padding: 0 8px;
 }
 
 .form-group {
@@ -366,7 +365,7 @@ nav button.active {
 }
 
 .form-group label {
-    padding: 6px 10px;
+    padding: 2px 8px;
     color: var(--text-75);
 }
 
@@ -379,8 +378,9 @@ nav button.active {
 
 .form-group input {
     width: 100%;
-    padding: 14px 18px;
-    border-radius: 10px;
+    height: 48px;
+    padding: 0 18px;
+    border-radius: 14px;
     border: solid 1px var(--border);
     background-color: var(--layer);
 }
@@ -392,13 +392,13 @@ nav button.active {
 .modal-actions {
     display: flex;
     gap: 4px;
-    padding: 10px 0;
+    padding: 14px 0 0 0;
 }
 
 .modal-actions button {
     width: 100%;
-    padding: 14px;
-    border-radius: 10px;
+    height: 48px;
+    border-radius: 14px;
     border: solid 1px var(--border);
     background-color: var(--layer);
 }
@@ -411,7 +411,7 @@ nav button.active {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 10px;
+    padding: 0 8px;
 }
 
 #confirm-ok-btn {
